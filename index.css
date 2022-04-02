@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load-clock {
+    position: relative;
+    height: 270px;
+    width: 270px;
+    margin-top: 5rem;
+    border-radius: 100%;
+    border: 10px solid #6600ff;
+}
+
+.load-clock:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 7px);
+    display: inline-block;
+    height: 120px;
+    width: 14px;
+    background: #6600ff;
+    border-radius: 5px;
+    transform-origin: 50% 97%;
+    animation: clock 2.3s linear infinite;
+}
+
+.load-clock:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 7px);
+    display: inline-block;
+    height: 110px;
+    width: 14px;
+    background: #6600ff;
+    border-radius: 5px;
+    transform-origin: 50% 97%;
+    animation: clock 13.8s linear infinite;
+}
+
+@keyframes clock {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
